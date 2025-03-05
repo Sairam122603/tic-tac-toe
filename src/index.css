@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full-page background with gradient */
+body {
+  @apply flex justify-center items-center h-screen bg-gradient-to-r from-blue-400 to-purple-500 text-gray-900;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+background-color: aqua;  
+  background-image: url('/src/download.png'); /* Adjusted path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Game container */
+.game-container {
+  @apply flex flex-col items-center bg-white p-8 rounded-3xl shadow-2xl;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  margin: auto; /* Center the game container */
+  margin-top: 50px; /* Move the game container down */
+}
+
+/* Title */
+.game-title {
+  @apply text-4xl font-bold mb-4 text-green-600 !important; /* Ensure color is applied */
+}
+
+/* Board: Perfect square shape */
+.board {
+  @apply grid grid-cols-3 gap-2;
+  width: 300px;
+  height: 300px;
+}
+
+/* Square: Evenly sized, with soft hover effect */
+.square {
+  @apply flex justify-center items-center w-full h-full text-3xl font-bold border-4 border-gray-700 cursor-pointer transition-all duration-200 rounded-lg;
+  background-color: rgba(116, 133, 209, 0.8);
+}
+
+.square:hover {
+  @apply bg-gray-300;
+}
+
+/* Status text */
+.status {
+  @apply text-xl font-semibold mb-4 text-gray-700;
+  text-align: center; /* Center the status text */
+}
+
+/* Winning message */
+.winning-message {
+  @apply text-2xl font-bold text-green-600;
+}
+
